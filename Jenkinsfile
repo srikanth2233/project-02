@@ -25,7 +25,7 @@ node {
     stage ('Install') {
       sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore install"
   }
-    stage ('Deployment - Deloy a Artifact ravi-3.3.6.war file to Tomcat Server') {
-      sh 'curl -u sri:sri@123 -T target/**.war "http://3.81.105.153:8080/manager/text/deploy?path=/srikanth&update=true"'
+    stage ('Deployment') {
+      sh 'curl -u sri:sri@123 -T target/**.war "http://34.227.98.165:8080/manager/text/deploy?path=/devops&update=true"'
   }
 }
